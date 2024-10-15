@@ -58,7 +58,7 @@ with lib;
             col.inactive_border = rgb(${config.stylix.base16Scheme.base01})
           }
           input {
-            kb_layout = ${keyboardLayout}
+            kb_layout = se
             kb_options = grp:alt_shift_toggle
             kb_options = caps:super
             follow_mouse = 1
