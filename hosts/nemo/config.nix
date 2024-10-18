@@ -466,7 +466,7 @@ in
     enable = true;
   };
 
-  console.keyMap = "${keyboardLayout}";
+  console.keyMap = "se";
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
