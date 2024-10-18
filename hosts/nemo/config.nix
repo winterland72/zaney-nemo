@@ -296,7 +296,6 @@ in
     remmina
     yacreader
     deadbeef-with-plugins
-    qbittorrent
     greetd.tuigreet
   ];
 
