@@ -93,6 +93,7 @@ in
       };
       sizes = {
         applications = 12;
+        terminal = 13;
         terminal = 15;
         desktop = 11;
         popups = 12;
@@ -104,6 +105,9 @@ in
   drivers.amdgpu.enable = false;
   drivers.nvidia.enable = true;
   drivers.nvidia-prime = {
+    enable = true;
+    intelBusID = "PCI:1:0:0";
+    nvidiaBusID = "PCI:0:2:0";
     enable = false;
     intelBusID = "";
     nvidiaBusID = "";
@@ -292,6 +296,13 @@ in
     tree
     spotify
     neovide
+<<<<<<< HEAD
+    calibre
+    remmina
+    yacreader
+    deadbeef-with-plugins
+=======
+>>>>>>> main
     greetd.tuigreet
   ];
 
