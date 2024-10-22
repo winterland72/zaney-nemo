@@ -94,6 +94,7 @@ in
       sizes = {
         applications = 12;
         terminal = 13;
+        terminal = 15;
         desktop = 11;
         popups = 12;
       };
@@ -107,6 +108,9 @@ in
     enable = true;
     intelBusID = "PCI:1:0:0";
     nvidiaBusID = "PCI:0:2:0";
+    enable = false;
+    intelBusID = "";
+    nvidiaBusID = "";
   };
   drivers.intel.enable = true;
   vm.guest-services.enable = false;
@@ -136,7 +140,7 @@ in
   };
 
   programs = {
-    firefox.enable = true;
+    firefox.enable = false;
     starship = {
       enable = true;
       settings = {
@@ -292,10 +296,13 @@ in
     tree
     spotify
     neovide
+<<<<<<< HEAD
     calibre
     remmina
     yacreader
     deadbeef-with-plugins
+=======
+>>>>>>> main
     greetd.tuigreet
   ];
 
@@ -335,7 +342,7 @@ in
     xserver = {
       enable = false;
       xkb = {
-        layout = "${keyboardLayout}";
+        layout = "se";
         variant = "";
       };
     };
@@ -354,14 +361,14 @@ in
       };
     };
     smartd = {
-      enable = false;
+      enable = true;
       autodetect = true;
     };
     libinput.enable = true;
     fstrim.enable = true;
     gvfs.enable = true;
     openssh.enable = true;
-    flatpak.enable = false;
+    flatpak.enable = true;
     printing = {
       enable = true;
       drivers = [
@@ -376,7 +383,7 @@ in
     };
     ipp-usb.enable = true;
     syncthing = {
-      enable = false;
+      enable = true;
       user = "${username}";
       dataDir = "/home/${username}";
       configDir = "/home/${username}/.config/syncthing";
@@ -470,7 +477,7 @@ in
     enable = true;
   };
 
-  console.keyMap = "${keyboardLayout}";
+  console.keyMap = "us";
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
