@@ -101,14 +101,14 @@ in
   };
 
   # Extra Module Options
-  drivers.amdgpu.enable = true;
-  drivers.nvidia.enable = false;
+  drivers.amdgpu.enable = false;
+  drivers.nvidia.enable = true;
   drivers.nvidia-prime = {
     enable = false;
     intelBusID = "";
     nvidiaBusID = "";
   };
-  drivers.intel.enable = false;
+  drivers.intel.enable = true;
   vm.guest-services.enable = false;
   local.hardware-clock.enable = false;
 
@@ -350,14 +350,14 @@ in
       };
     };
     smartd = {
-      enable = false;
+      enable = true;
       autodetect = true;
     };
     libinput.enable = true;
     fstrim.enable = true;
     gvfs.enable = true;
     openssh.enable = true;
-    flatpak.enable = false;
+    flatpak.enable = true;
     printing = {
       enable = true;
       drivers = [
@@ -372,7 +372,7 @@ in
     };
     ipp-usb.enable = true;
     syncthing = {
-      enable = false;
+      enable = true;
       user = "${username}";
       dataDir = "/home/${username}";
       configDir = "/home/${username}/.config/syncthing";
